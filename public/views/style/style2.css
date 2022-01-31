@@ -1,0 +1,457 @@
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'mother_dayregular';
+    src: url('font/motherfont/motherday-webfont.woff') format('woff2'),
+    url('font/motherfont/motherday-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*--------------------------nav bar ------------------------------*/
+
+body{
+    width:100%;
+    
+}
+header{
+    width:100%;
+    height:90px;
+    background: fixed url("../images/image.jpg") no-repeat center/cover;
+    
+}
+nav{
+    position:fixed;
+    width:100%; 
+    background-color: rgba(0,0,0,0.4);
+    transition: 1s;  
+    z-index: 1; 
+    height:90px;
+    overflow: hidden;
+    
+}
+
+nav ul{
+    padding:0;
+    text-align:center;
+    margin:0;
+    
+}
+nav ul li{
+    display:inline-block;    
+}
+nav a{
+    text-decoration: none;
+    color:white;
+    font-size: 2.5em;
+    font-weight:580;
+    font-family: mother_dayregular;
+    
+}
+nav a:hover{
+
+    color : white;
+    cursor: pointer;
+    text-decoration: white underline 2px solid;
+    transform: scale(1.2);
+
+}
+.item{
+    padding:20px;
+}
+
+.logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.logo{
+    text-align: start;
+    margin:3px;   
+    float:left;
+    height:85px;
+    width:170px;
+}
+
+.item:hover{
+    transform: scale(1.2);
+}
+.hamburger:hover{
+    cursor:pointer;
+    transform:scale(1.2);
+}
+.bulle{
+    float:right;
+    cursor:pointer;
+    padding:15px;  
+    list-style: none;
+}
+.bulle:hover{
+    transform: scale(1.2);
+}
+.logo-medias{
+    background-color: white;
+    border-radius: 50%;
+    padding:7px;
+    width:50px;
+    height:50px;
+   
+}
+.scroll{
+    background-color: rgba(0,0,0);
+}
+.hamburger{
+    width:100px;
+    display:none;
+    padding:15px 20px;
+}
+
+@media (max-width: 780px){
+    .hamburger{
+        display:block;
+        float:right;
+    }
+    .logo{
+        position:fixed;
+        top:0;
+        text-align: start;
+        margin-bottom: 0px;
+    }
+    
+    nav ul{
+        max-height: 0px;
+        background: #000;
+    }
+    
+    .menu{
+        height: 35em;
+        overflow: visible;
+        background: #000;
+    }
+    .item,.bulle{
+        width:100%;
+        
+        
+    }
+}
+/*----------------------------------End of navbar ----------------------*/
+.home{
+background: fixed url("../images/image.jpg") no-repeat center/cover; 
+align-items: center;
+justify-content: center;
+display:flex;
+flex-direction: column;
+}
+
+.galerie_photo,.container_tarifs{
+width:80%;
+max-width: 1300px;   
+display:flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-around;
+}
+.galerie_photo{
+    min-height:100vh;
+}
+
+
+.photo,.carte{
+    height:300px;
+    width:230px;
+    margin:35px 20px;
+    border-radius: 15px;
+    border:black solid 3px;
+    box-shadow:  -30px 30px 20px rgba(0,0,0,0.7);
+    overflow: hidden;
+    text-align:center; 
+}
+.carte{
+    padding: 8px;
+    background-color: rgb(255, 224, 179);
+
+}
+
+/*------------------------------tarifs--------------------------------*/
+.tarif{
+    background:blanchedalmond;
+    min-height: 100vh;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    flex:auto;
+    width : 100%;
+}
+    
+h1{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 2em;
+    font-family: mother_dayregular;
+}
+
+h2{
+    text-align:center;
+    padding-top: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: mother_dayregular;
+}
+
+h3{
+    text-align:center;
+    font-family: mother_dayregular;
+    font-size: 2em;
+}
+.separateur{
+    width:50%;
+    height:3px;
+    background-color:  black;
+    
+    
+}
+.carte p{
+    font-size: 1 em;
+    color:rgb(105, 103, 103);
+    margin-bottom: 20px;
+}
+.carte span{
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+.carte ul{
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align:left;
+    list-style-type: none;
+    padding:10px;
+    margin-top: 20px;
+}
+.carte li{
+    margin: 4px;
+}
+.check{
+    width:15px;
+    height:15px;  
+    margin-left: 3px;
+
+}
+.essai{
+    text-align: center;
+}
+/*----------------------------------------contact------------------------*/
+.contact{
+    display:flex;
+    min-height:100vh;
+    flex-wrap: wrap;  
+    align-items: center;
+    justify-content: center;
+    
+}
+.visite{
+    height:370px;
+    width:300px;
+    background: url("../images/radia3.jpg") center center no-repeat ;
+    background-size: 300px;
+    border-radius: 10px;
+    border: 5px solid black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:5px 0 5px 0;
+    box-shadow: 0 70px 63px -60px black;
+    transition: all .8s ;
+}
+.visite:hover{
+    background: url("../images/radia3.jpg") left center no-repeat ;
+    background-size: 600px;
+}
+.visite h5{
+    margin:20px;
+    font-size:1.5em;
+    opacity:0;
+    transition: all 2s;
+}
+.visite:hover h5{
+    opacity:1;
+}
+.border{
+    height:360px;
+    width:290px;
+    border-radius: 5px;
+    position:relative;
+}
+.border:hover{
+    border: 5px solid white;
+}
+.icons{
+    position:absolute;
+    top:130px;
+    left:60px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity:0;
+    transition: all 2s;
+}
+
+.visite:hover .icons{
+    opacity:1;
+}
+
+
+h5{
+    padding: 0 15px;
+    text-shadow: 10px 2px 10px rgba(0,0,0);
+    display: inline-block;
+    margin: 0 auto;
+    color:#f1f1f1;
+}
+/*------------------------------------formulaire-------------------------*/
+.titre_form{
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 68%,blanchedalmond 68%,blanchedalmond 95%,transparent 95%);
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+.container_contact{
+    width:500px;
+    display:flex;
+    flex-direction:column;
+    background:rgba(0,0,0,0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    padding: 30px 50px; 
+}
+.form_group{
+    width:100%;
+    margin-bottom: 20px;
+    position:relative;
+}
+.form_label{
+    position:absolute;
+    font-size: 16px;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+    transition: all .3s;
+    color:#fff;
+}
+.form_input{
+    font-size: 16px;
+    font-family: inherit;
+    padding: 3px 10px;
+    border-radius: 3px;
+    border:none;
+    border-bottom: 4px solid transparent;
+    width: 100%;
+    transition: all .3s;
+}
+.form_input::-webkit-input-placeholder{
+    color:#000;
+    transform:translateY(4px);
+}
+.form_input:focus::-webkit-input-placeholder{
+    visibility: hidden;
+    opacity: 0;
+}
+.form_input:focus{
+    outline:none;
+    border-bottom: 4px solid #2FE94A;
+    width:66.6666%;
+
+}
+.form_input:focus:invalid{
+border-bottom: 4px solid #E94A2F;
+
+}
+.form_input:focus + .form_label{
+    opacity:1;
+    font-size:20px;
+}
+.form_message,.form_message .message_input{
+    width:100%;
+}
+.submitBtn{
+    display:block;
+    padding:5px 30px;
+    border:none;
+    background-color: blanchedalmond;
+    text-shadow: 0px 0px 5px rgba(0,0,0);
+    font-family: inherit;
+    font-size: 25px;
+    margin:20px auto;
+    cursor:pointer;
+    transition: all .3s;
+}
+.submitBtn:hover{transform:scale(1.02) translateY(-2px);}
+.submitBtn:focus{transform:scale(0.98) translateY(1px);}
+.form_message-label{
+    color:#fff;
+    font-family: inherit;
+    font-size: 20px;
+}
+.center{
+    background-color: red;
+    width:100%;
+    text-align: center;
+    height:50px;
+}
+.valide{
+  color:chartreuse;
+  font-weight:bold;
+}
+.nonValide{
+  color:red;
+  font-weight:bold;
+}
+/*----------------------------------mentions légales -------------------------*/
+.mentionLegales{
+    background-color: black;
+    
+    bottom : 0;
+    right : 0;
+    left : 0;
+    height:auto;  
+    text-align: center;
+    color:white;
+}
+.mentionLegales ul li a{
+    text-decoration: none;
+    color:blanchedalmond;
+}
+.mentionLegales ul{
+    padding: 10px;
+    list-style-type: none;
+    width: 300px;
+    margin:0 auto;
+}
+
+.mentionLegales ul li:hover{
+    transform: scale(1.1);
+    text-decoration:underline 2px solid blanchedalmond;
+
+}    
+    
+/*----------------------page mentions légales -----------------*/
+
+
+h6{
+    text-align: center;
+    font-size: 2.5em;
+    margin:3px;
+}
+.contenu{
+    width:700px;
+    text-align: left;
+    margin:0 auto;
+    
+}
+/*---------------------------------formulaire--------------------*/
+.container{
+    width: 500px;
+}

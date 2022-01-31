@@ -1,0 +1,51 @@
+*,::before,::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: 'mother_dayregular';
+    src: url('font/motherfont/motherday-webfont.woff2') format('woff2'),
+         url('font/motherfont/motherday-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+    background: fixed url("/images/background.jpg") no-repeat center/cover ;
+    align-items: center;
+    text-align: center;   
+}
+.logo{
+    margin-top: 10vh;
+    border: 5px solid black;
+    border-radius: 5px;
+    animation:fadein 3s;
+    width:300px;
+    
+    
+}
+
+.bouton{
+    margin-top: 100px;
+    border:2px solid #f1f1f1;
+    background: transparent;
+    font-size: 30px;
+    color:white;
+    padding:20px;
+    width:200px;   
+    animation:fadein 3s;
+}
+
+.bouton:hover{
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(45deg, rgba(48, 43, 43, 0.6),rgba(154, 155, 151, 0.6));
+    border:3px solid black;
+}
+
+@keyframes fadein{
+    
+    0%{opacity:0;}
+    50%{opacity:.5;}
+    100%{opacity:1;}
+}
